@@ -2,5 +2,5 @@ import { defineConfig } from 'vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-    base: process.env.NODE_ENV === 'production' ? '/mmfm-workshop.github.io/' : '/',
+    base: '/mmfm-workshop.github.io/',
 })
