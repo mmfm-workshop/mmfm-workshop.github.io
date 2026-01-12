@@ -1,0 +1,408 @@
+% WS proposal template for CVPR 2026
+% V. Albiero, J. Tompkin
+
+% Adopted from ECCV 2020, ECCV 2022, ICCV 2023 templates by M. Cho, B. Ham, A. Bartoli, A. Fusiello, A. Vedaldi, L. Karlinsky, T. Michaeli, K. Nishino
+
+
+\documentclass[11pt]{article}
+% \usepackage{times}
+\usepackage[utf8]{inputenc}
+\usepackage{xspace}
+\usepackage{xcolor}
+\usepackage{geometry}
+\newgeometry{vmargin={1in, 1in}, hmargin={1in,1in}}
+\usepackage[many]{tcolorbox}
+\usepackage[pagebackref,breaklinks,colorlinks,citecolor=cvprblue,linkcolor=cvprblue]{hyperref}
+\definecolor{cvprblue}{rgb}{0.21,0.49,0.74}
+\newcommand{\minisection}[1]{\noindent{\textbf{#1}.}}
+
+\newcommand\conf{CVPR 2026\xspace}
+\title{\vspace{-1cm}The 5th Workshop on \\ ``What is Next in Multimodal  Foundation Models?'' \\ \vspace{0.2in} \Large{CVPR 2026 Workshop Proposal}}
+\author{\normalsize{Edson Araujo, 
+Roei Herzig,
+% \item
+David Chan,
+Bo Wu,
+Tsung-Han (Patrick) Wu,
+Dantong Niu,
+% \item 
+% \item 
+}\\
+% \item 
+\normalsize{
+Jiaxin Ge,
+% \item 
+% \item  
+% Assaf Arbelle, 
+% \item 
+Eli Schwartz,
+Nimrod Shabtay,
+Sivan Doveh,
+Jehanzeb Mirza,
+Rogerio Feris,
+% \item 
+Hilde Kuehne
+}}
+\date{}
+
+% instructions
+\def\c#1{\textcolor{gray}{#1}}
+% indicates parts to complete
+\def\x{\textcolor{red}{xxx}}
+
+\begin{document}
+
+\maketitle
+
+\section*{Abstract}
+\noindent Multimodal Foundation Models (MMFMs) have revolutionized AI, achieving remarkable success across vision, language, speech, and beyond. The 5th edition of this workshop aims to explore what is next in this rapidly evolving field, addressing fundamental challenges and charting paths forward. We bring together diverse leaders from academia and industry to discuss critical aspects including model design, training paradigms, generalization, efficiency, ethics, fairness, and open availability. The workshop features invited talks from distinguished researchers, a call for papers with archival proceedings, poster presentations, and a panel discussion engaging the community on future directions and open problems in multimodal foundation models.
+
+\vspace{0.2cm}
+
+
+ \begin{figure}[h!]
+     \centering
+     \includegraphics[width=0.42\textwidth]{figures/MMFMAudience.jpg}
+     \includegraphics[width=0.42\textwidth]{figures/cvpr2024_mmfm.jpeg}\\
+     \vspace{0.2cm}
+     \includegraphics[width=0.42\textwidth]{figures/mmfm_cvpr25.jpeg}
+     \includegraphics[width=0.42\textwidth]{figures/mmfm_iccv25.png}
+     \caption{Impressions from all four previous editions of the workshop: ICCV 2023 (top left), CVPR 2024 (top right), CVPR 2025 (bottom left), and ICCV 2025 (bottom right). The workshop has consistently attracted large audiences and significant attention from the computer vision community across all editions.}
+     \label{fig:ipressions_ICCV_CVPR}
+ \end{figure}
+
+\section{Summary}
+\begin{tabular}{ll}
+  \hline
+  Workshop title & \textit{What is Next in Multi-Modal Foundation Models?} \\
+  Acronym & \textit{MMFM} \\
+  Edition & 5th \\
+  Keywords & Vision and Language; Multimodal Foundation Models \\
+  Primary contact name and email & Edson Araujo (edson.roteia-araujo-junior@uni-tuebingen.de) \\
+  Half or full day & half \\
+  Anticipated audience size & Large ($>300$ attendees) \\
+  Requested number of poster boards & 50 \\
+  Papers published in proceedings? & Yes, ~30 papers \\
+  Special requests & NA \\
+  \hline
+\end{tabular}
+
+
+\section{Topic}
+
+
+\begin{tcolorbox}[breakable,width=\linewidth, colback=white!95!black]
+
+\noindent \textbf{Primary Topic:} 
+Multimodal learning
+
+\vspace{0.1cm}
+\noindent \textbf{Secondary Topics:}
+\begin{itemize}
+\item Multimodal detection, recognition, segmentation
+\item Foundation models (LLM, VLM, VLA, etc.)
+\item Representation learning
+\item Self-, semi-, meta-, and unsupervised learning
+\item Vision, language and reasoning
+\end{itemize}
+
+\vspace{0.3cm}
+\noindent \textbf{Topics Covered:} Vision / Sound / Speech / Robotics / Language FMs in any possible combination; Data and model scaling properties of MMFMs; Self / Semi / Weakly supervised training of MMFMs; Multimodal grounding in foundation models; Generative MMFMs (e.g., text-to-image/video/3D generation); Ethics, risks, and fairness of MMFMs; Efficient training and inference of MMFMs; Parameter-efficient fine-tuning, prompting, and adapters for MMFMs; Generalization of MMFMs to other domains; Multi-task and continual learning for MMFMs; Compositionality and reasoning approaches for MMFMs.
+
+\end{tcolorbox}
+
+\section{Organizers and speakers}
+\subsection{List of organizers (All Confirmed)}
+
+
+\noindent {\bf Organizers responsible for liaising with the workshop chairs}
+\begin{itemize}
+    \item \textbf{Primary Liaison:} Edson Araujo (edson.roteia-araujo-junior@uni-tuebingen.de)
+    \item \textbf{Secondary Liaison:} Roei Herzig (roeiherz@gmail.com)
+\end{itemize}
+
+\noindent {\bf Organizers}
+\begin{itemize}
+    \item Edson Araujo (edson.roteia-araujo-junior@uni-tuebingen.de), Roei Herzig (roeiherz@gmail.com), David Chan (davidchan@berkeley.edu), Bo Wu (bo.wu@ibm.com), Tsung-Han (Patrick) Wu (tsunghan_wu@berkeley.edu), Dantong Niu (niudantong.88@berkeley.edu), Jiaxin Ge (gejiaxin01@gmail.com), Eli Schwartz (me@eli-schwartz.com), Nimrod Shabtay (nimrod.shabtay@ibm.com), Sivan Doveh (sivand@stanford.edu), Jehanzeb Mirza (jmirza@mit.edu), Rogerio Feris (rsferis@us.ibm.com), Hilde Kuehne (h.kuehne@uni-tuebingen.de)
+\end{itemize}
+
+\noindent{\bf Program Chairs (all confirmed)}
+
+\begin{itemize}
+\item 
+Tsung-Han (Patrick) Wu (UCB),
+Jiaxin Ge (UCB),
+Dantong Niu (UCB),
+Eli Schwartz (IBM Research),
+
+Nimrod Shabtay (IBM Research, Tel Aviv University),
+Edson Araujo (University of Tübingen),
+Jehanzeb Mirza (MIT)
+
+\end{itemize}
+
+
+
+\subsection{Organizers' experience and background}
+
+
+\vspace{0.1in}
+ 
+{\bf Ability to run a workshop.} Our team has significant experience organizing workshops and tutorials in top-tier AI conferences, including the four previous versions of the proposed workshop. Collectively, we have organized more than 20 workshops at ICCV/CVPR/ECCV conferences. Examples of recent events organized by our team members include:
+CVPR Workshop on Dynamic Neural Networks Meets Computer Vision, 2022;
+CVPR Workshop on Dynamic Neural Networks Meets Computer Vision, 2021;
+CVPR Workshop on Neural Architecture Search, 2021;
+CVPR Workshop on Visual Learning with Limited Labels: Zero-Shot, Few-Shot, Any-Shot, and Cross-Domain Few-Shot Learning, 2020;
+CVPR Workshop on Computer Vision for Fashion, Art, and Design, 2020;
+CVPR Workshop on Neural Architecture Search and Beyond for Representation Learning, 2020;
+CVPR Workshop on Diagram Image Retrieval and Analysis, 2020;
+CVPR Workshop on Fair, Data-Efficient and Trusted Computer Vision, 2020; 
+CVPR Workshop on Skin Image Analysis, 2020;
+ECCV Workshop on Multimodal Video Analysis, 2020;
+CVPR Workshop on Bias Estimation in Face Analytics, 2019;
+CVPR Workshop on Skin Image Analysis, 2019;
+ICCV Workshop on Linguistics Meets Image and Video Retrieval, 2019;
+ICCV Workshop on Moving Cameras: from Body Cameras to Drones, 2019;
+ICCV Workshop on Multimodal Video Analysis and Moments in Time Challenge, 2019.\vspace{0.15cm}
+
+
+
+\noindent {\bf Background on the workshop topic.} Our team has a strong background in FM and multimodal learning research. Examples of recent work by the team include learning to grow pre-trained transformers for billion-scale model training \cite{lego,stallone2024scalinggranitecodemodels}, multi-task prompt tuning in FMs \cite{mpt,mirza2023mpvr}, generalization of MMFMs \cite{feta,gong_ltuas}, few-shot personalized localization in VLMs \cite{doveh2025teaching}, multimodal learning methods that combine vision, language, and sound \cite{gong2023contrastive,rouditchenko24_interspeech,araujo2025cav} and benchmarks \cite{shabtay2024livexivmultimodallive,tannert-etal-2023-flowchartqa,huang2024conmerethinkingevaluationcompositional}. 
+
+ \vspace{0.1in}
+ 
+\noindent {\bf Brief bio of the organizers:}
+
+
+\vspace{0.1in}
+\noindent \href{https://edsonroteia.github.io/} {Edson Araujo} is a PhD student at the University of Tübingen, advised by Prof. Hilde Kuehne. His research focuses on audio-visual understanding and multimodal representation learning (CVPR 2025). Before his PhD, he received his BSc and MSc from Universidade Federal de Minas Gerais (UFMG), Brazil, where he co-authored papers on video understanding (CVPR, TPAMI).
+
+\vspace{0.1in}
+\noindent \href{https://roeiherz.github.io/} {Roei Herzig} is a Research Scientist at the MIT-IBM lab and a collaborator with Prof. Trevor Darrell at UC Berkeley. His research goal is to develop compositionality into intelligent machines to improve robustness and generalization across a wide range of fields, such as vision, language, and robotics. He is actively publishing and reviewing duties at ECCV, ICCV, CVPR, ICLR, and NeurIPS, and has served as PC for workshops at CVPR and ICCV.
+
+
+\vspace{0.1in}
+\noindent \href{https://dchan.cc/} {David Chan} is a Postdoctoral Scholar at UC Berkeley developing context-driven agents for multimodal learning. David has served on the program committee for conferences including ICCV, ECCV, CVPR, EMNLP and *CL, with outstanding reviewer recognitions at CVPR (2023), ECCV (2024), EMNLP (2024), and NeurIPS (2022) and as primary organizer for MMFM4 (ICCV 2025) and the workshop on Human Alignment in AI Decision-Making Systems at IEEE CAI 2025.
+
+
+\vspace{0.1in}
+\noindent \href{https://bobbywu.com/} {Bo Wu} is an AI Researcher at the MIT-IBM Watson AI Lab. He received his Ph.D. in Computer Science from the Chinese Academy of Sciences. His research focuses on multimodal learning, computer vision, and natural language understanding. He has organized multiple workshops including CVPR Workshops on MVCS and MMFM, and has served as Area Chair and Senior Program Committee Member for major conferences including ACM Multimedia, AAAI, and IJCAI.
+
+\vspace{0.1in}
+\noindent \href{https://eli-schwartz.com/} {Eli Schwartz} Eli Schwartz is a Research Scientist and Manager at IBM Research AI, specializing in multimodal foundation models, learning with limited data, and representation learning. He received his Ph.D. in Electrical Engineering from TAU (2023), where he currently serves as an Adjunct Professor. He regularly publishes at top-tier conferences like NeurIPS, CVPR, and ICCV, and has served as PC for workshops at CVPR and ICCV.
+
+
+
+
+
+% is a Research Scientist and Tech Lead at IBM Research AI, where he focuses on multimodal foundation models. He received his Ph.D. in Electrical Engineering from Tel-Aviv University (2023), where he currently serves as an Adjunct Professor. His research interests include learning with limited data, representation learning, and vision-language foundation models. Eli regularly publishes and reviews in top-tier conferences including NeurIPS, CVPR, ICCV, and EMNLP. He has served as Program Chair for the Multimodal Foundation Models Workshop (CVPR 2024, ICCV 2023) and Learning with Limited Labels (CVPR 2020). Previously, he co-founded Inka Robotics and held positions at Microsoft and Qualcomm.
+
+
+
+\vspace{0.1in}
+\noindent \href{https://gejiaxin.org/} {Jiaxin Ge} is a PhD student at UC Berkeley advised by Prof. Trevor Darrell. She is affiliated with Berkeley AI Research Lab (BAIR). Previously, she graduated from Peking University with a BSc in CS. Her research focuses on building generalizable vision-language models for reasoning, understanding, and real-world applications. She has published several papers in ECCV, ACL, and EMNLP since 2023.
+
+\vspace{0.1in}
+\noindent \href{https://tsunghan-wu.github.io/} {Tsung-Han (Patrick) Wu} is a CS PhD student at UC Berkeley, advised by Prof. Trevor Darrell and Prof. Joseph E. Gonzalez. 
+His recent research and publications (CVPR 2024, ICLR 2025) focus on exploring the zero-shot applications and addressing the limitations of LMMs. Before Berkeley, he graduated from National Taiwan University (BSc and MSc in CS), working on general computer vision problems. 
+
+\vspace{0.1in}
+\noindent \href{https://dantong88.github.io/} {Dantong Niu} is a PhD student at UC Berkeley advised by Prof. Trevor Darrell. Her research focuses on VLMs for general vision and robotic tasks. Before her PhD, she worked on video understanding, image segmentation, and adversarial attacks. Since 2021, she has published several papers in CVPR, CoRL, ICCV, and NeurIPS.
+
+\vspace{0.1in}
+\noindent \href{https://www.linkedin.com/in/nimrod-shabtay/?originalSubdomain=il} {Nimrod Shabtay} is a PhD candidate at Tel Aviv University advised by Prof. Raja Giryes. His research focuses on developing more reliable and context-aware Vision-Language Models. (ICLR 2025, ICCV 2025) Prior to his PhD, he worked on image reconstruction tasks.
+
+\vspace{0.1in}
+\noindent \href{https://sivandoveh.github.io/} {Sivan Doveh} is a Postdoctoral researcher at Stanford University working with Prof. Serena Yeung. Her research examines the core mechanisms, strengths, and limitations of vision-language models, with a focus on new data and training approaches. She completed her PhD in Computer Science at the Weizmann Institute of Science under Prof. Shimon Ullman and was previously a student researcher at Google.
+
+\vspace{0.1in}
+\noindent \href{https://jmiemirza.github.io/} {Muhammad Jehanzeb Mirza} is a Postdoctoral researcher at MIT CSAIL at the Spoken Language Systems Group, headed by James Glass. His research is focused on unsupervised representation learning from various data modalities (images, videos, point clouds, and natural language). He actively publishes and reviews at venues such as NeurIPS, ICLR, CVPR, ICCV, ECCV, and TPAMI. He received his PhD degree (with distinction) from the Graz University of Technology, where he was advised by Prof. Horst Bischof.
+
+
+\vspace{0.1in}
+\noindent \href{http://www.rogerioferis.org} {Rogerio Feris} is a principal scientist and manager at the MIT-IBM lab. He has also worked as an Affiliate Associate Professor at the University of Washington and as an Adjunct Associate Professor at Columbia University. He has authored over 150 technical papers and has over 50 issued patents in the areas of computer vision (CV), multimedia, and machine learning (ML). He is an Associate Editor of TPAMI, has served as a Program Chair of WACV 2017, and frequently serves as an Area Chair for top CV and ML conferences, such as NeurIPS, CVPR, ECCV, and ICCV. 
+
+
+\vspace{0.1in}
+\noindent \href{https://hildekuehne.github.io/} {Hilde Kuehne} is a Full Professor for Multimodal Learning at the Tuebingen AI Center and an affiliated professor at the MIT-IBM Watson AI Lab.  Her research focuses on multimodal learning and video understanding. She has published high-impact works in the field and was awarded with the ICCV 2021 Test-of-time Award and the PAMI Mark Everingham Prize. She has organized various workshops at ICCV, ECCV, and CVPR. She is committed to more diversity to STEM and is a board member of the WiCV Initiative.
+
+
+
+
+
+\subsection{List of invited speakers}
+
+\textbf{Invited Speakers.}
+\begin{enumerate}
+
+    % \item \href{https://people.csail.mit.edu/kaiming/}{Kaiming He} (MIT; Google DeepMind) {\bf [tentative]} - Kaiming He is an Associate Professor with tenure in the Department of EECS at MIT and a Distinguished Scientist at Google DeepMind. He is best known for Deep Residual Networks (ResNets), the most-cited paper of the twenty-first century. His research areas include computer vision and deep learning, with over 700,000 citations. He has received numerous prestigious awards, including the ICCV Helmholtz Prize (2025), PAMI Young Researcher Award (2018), and multiple Best Paper Awards at ICCV and CVPR.
+
+    \item \href{https://ai.stanford.edu/~syyeung/}{Serena Yeung-Levy} (Stanford) {\bf [confirmed]} - Serena Yeung-Levy is an Assistant Professor of Biomedical Data Science and, by courtesy, of Computer Science and Electrical Engineering at Stanford University. Her research focuses on computer vision, machine learning, and deep learning applications in healthcare. She leads the Medical AI and Computer Vision Lab (MARVL) and serves as Associate Director of Data Science for the Stanford Center for Artificial Intelligence in Medicine \& Imaging (AIMI).
+
+    \item \href{https://www.sainingxie.com/}{Saining Xie} (NYU) {\bf [confirmed]} - Saining Xie is an Assistant Professor of Computer Science at NYU Courant, affiliated with the CILVR group and the NYU Center for Data Science. Previously, he was a research scientist at Facebook AI Research (FAIR). He received his Ph.D. and M.S. degrees from UC San Diego, advised by Zhuowen Tu. His primary research interests are in deep learning and computer vision, with a focus on developing improved representation learning techniques that aid machines in comprehending and utilizing massive amounts of structured information.
+
+    % \item \href{https://lucasb.eyer.be/}{Lucas Beyer} (Meta) {\bf [tentative]} - Lucas Beyer is a Member of Technical Staff at Meta Superintelligence Labs, Zürich. Previously, he was a Staff Research Scientist at Google Brain/DeepMind. His research focuses on computer vision and vision-language models, with over 50 publications at top-tier conferences. He is known for his work on Vision Transformer (ViT), SigLIP, PaliGemma, and scaling vision models.
+
+    \item \href{https://www.cs.cornell.edu/~hadarelor/}{Hadar Averbuch-Elor} (Cornell) {\bf [confirmed]} - Hadar Averbuch-Elor is an Assistant Professor in the Computer Science Department at Cornell University \& Cornell Tech. Her research interests are in computer graphics and vision, with a focus on combining pixels with structured modalities such as natural language and 3D geometry for building multimodal perception systems. She received her Ph.D. from Tel Aviv University, advised by Daniel Cohen-Or.
+
+    \item \href{https://people.eecs.berkeley.edu/~trevor/}{Trevor Darrell} (UC Berkeley) {\bf [confirmed]} - Trevor Darrell is a Professor in the CS and EE Divisions of the EECS Department at UC Berkeley. He founded and co-leads Berkeley's Berkeley Artificial Intelligence Research (BAIR) lab, the Berkeley DeepDrive (BDD) Industrial Consortia, and the BAIR Commons program. Prof. Darrell was Faculty Director of the PATH research center at UC Berkeley from 2015-2021 and led the Vision group at the UC-affiliated International Computer Science Institute in Berkeley from 2008-2014. With over 312,000 citations, his research has had tremendous impact on computer vision and multimodal learning. 
+\end{enumerate}
+
+
+\noindent \textbf{Panelists.} The panelists are the same as the speakers. They will discuss the future of MMFMs, covering open problems, paths forward, significant applications, and challenges like availability, efficiency, and fairness. Moderated by Edson Araujo, the panel will include introductions, a facilitated discussion, and a Q\&A session with audience participation. Following presentations, panelists will engage in discussions and address audience questions both online and live. The session will conclude with panelists summarizing key points. Previous panels from our workshop series can be found at (\href{https://sites.google.com/view/mmfm4thworkshop/home}{workshop website}).
+
+
+
+
+
+
+
+\subsection{Diversity}
+
+Our workshop proposal demonstrates a strong commitment to diversity and inclusion: (i) \textbf{Gender diversity:} We strive for a diverse group of speakers and organizers, with representation across gender identities. (ii) \textbf{Seniority diversity:} We have a wide range of seniority levels in our workshop proposal (organizers and speakers), from PhD students to senior faculty and industry leaders. (iii) \textbf{Geography diversity:} Our organizers, speakers, and panelists cover a wide variety of countries and regions, including USA, Israel, Germany, China, Taiwan, Brazil, and Switzerland. (iv) \textbf{Affiliations, university and industry diversity:} Our workshop involves multiple institutions, including companies (IBM, Google) and universities (MIT, UC Berkeley, NYU, Stanford, Cornell, University of Tübingen, Tel Aviv University).
+
+
+\section{Format and logistics: \textit{In-person only}.}
+
+
+
+
+\subsection{Schedule}
+
+Assuming a morning half-day slot, the schedule could tentatively be structured as follows:
+
+
+\begin{tcolorbox}[breakable,width=\linewidth, colback=white!95!black]
+
+\begin{itemize}
+\item 08:30am - Welcome (5min)
+
+\item 08:35am - Keynote Talk 1 (25min + 5min QA)
+
+\item 09:05am - Keynote Talk 2 (25min + 5min QA)
+
+\item 09:35am - Poster session + Coffee break (1h 15min)
+
+\item 10:50am - Keynote Talk 3 (25min + 5min QA)
+
+\item 11:20am - Keynote Talk 4 (25min + 5min QA)
+
+\item 11:50pm - Panel Discussion: What is Next in Multimodal Foundation Models? (60min)
+
+\hspace{2cm} Moderator: Edson Araujo (University of Tübingen)
+
+\hspace{2cm} Panelists: All invited speakers
+
+\item 12:50pm - Concluding Remarks (10min)
+
+\item 01:00pm - Adjourn
+\end{itemize}
+
+\end{tcolorbox}
+
+
+
+
+\subsection{Paper submission}
+
+There will be two tracks for paper submissions:
+\begin{itemize}
+    \item \textbf{Archival:} Full-length papers with proceedings in CVPR format: 8 pages.
+    \item \textbf{Non-Archival:} Short papers (extended abstracts): 4 pages - papers accepted to CVPR: 8 pages.
+\end{itemize}
+
+\noindent\textbf{Timeline for full-length papers with proceedings track (tentative):}
+\begin{itemize}
+    \item Paper Submission Deadline: March 14, 2026
+    \item Notification to Authors: April 01, 2026
+    \item Camera-ready deadline: April 11, 2026
+    \item Finalized workshop program: April 18, 2026
+\end{itemize}
+
+\noindent\textbf{Timeline for non-archived track (tentative):}
+\begin{itemize}
+    \item Paper Submission Deadline: March 21, 2026 - April 1, 2026
+    \item Notification to Authors: April 14, 2026
+\end{itemize}
+
+
+\noindent \textbf{Paper Load.} 50-100 papers are expected to be submitted, and around 30 papers will be selected to present at the poster session. One paper will receive the best paper award, recommended during peer review and selected by the workshop chairs. In addition to the tentative members listed below, authors submitting papers to the workshop will also be asked to serve on the program committee.
+
+\vspace{0.1in}
+\noindent \textbf{Tentative Program Committee.}
+Arsha Nagrani, Google;
+Max Bain, Oxford;
+Christoph Auer, IBM;
+Antoine Miech, DeepMind;
+Kuniaki Saito, Boston University;
+Antoine Yang, Inria;
+Tengda Han, Oxford;
+Odellia Boni, IBM;
+Oshri Naparstek, Google;
+A. Sophia Koepke, University of Tübingen;
+Triantafyllos Afouras, Meta;
+Medhini Narasimhan, Google;
+Reuben Tan, Boston University;
+% Or Patashnik, Tel-Aviv University;
+Rinon Gal, Tel-Aviv University;
+Niv Cohen, Hebrew University;
+% Joseph Shtok, IBM;
+% Elad Amrani, Apple;
+Dat Huynh, Meta AI;
+Young Kyun Jang, Meta AI;
+Andrea Burns, Boston University;
+Pamela Mishkin, OpenAI;
+Amanda Askell, Anthropic;
+Tianlu Wang, Meta AI;
+Fuwen Tan, Samsung AI;
+Ruben Villegas, Google Brain;
+Shyamal Buch, Stanford University;
+Ziyan Yang, Rice University;
+
+
+\section{Broader Impact}
+\subsection{Broader Impact Statement}
+
+The intersection of foundation models with multimodal learning is a significant and widely discussed topic that extends beyond computer vision and enriches the main CVPR conference. We anticipate that our workshop will capture considerable interest from the CVPR audience, owing to its interdisciplinary nature and the central role of foundation models in recent major AI advancements. Notably, large language models and techniques from the NLP community have been successfully adapted for computer vision, leading to breakthroughs. Despite these advances, challenges remain, and new opportunities are emerging. Therefore, it is crucial for our community to discuss future directions, forward paths, and the societal implications of multimodal foundation models.
+
+\subsection{Ethical Considerations}
+
+The rapid progress in multimodal foundation models has sparked numerous ethical debates. Key issues include differentiating between real and AI-generated content, data privacy and copyright, and the explainability and transparency of model outputs. These ethical considerations will be a central theme in our workshop's panel discussion, and we will actively solicit papers and opinions on this topic.
+
+
+
+\section{Relationship to previous workshops}
+We describe below how our proposal relates to recent workshops at CVPR, ICCV, ECCV, etc.
+
+
+\vspace{0.15cm}\noindent \textbf{Workshop on ``What is Next in Multi-Modal Foundation Models?'' (MMFM)} (\href{https://sites.google.com/view/mmfm4thworkshop/home}{link}) [ICCV'25, CVPR'25, CVPR'24, ICCV'23]
+\textit{Relation:} Previous versions of the proposed workshop were organized by this team. We plan this to be a follow-up workshop, further expanding the horizons of the topic. Our workshops have consistently attracted large audiences across four previous editions (ICCV 2023, CVPR 2024, CVPR 2025, and ICCV 2025), with each being assigned plenary or large rooms and drawing significant attention from the computer vision community (see Figure \ref{fig:ipressions_ICCV_CVPR}).
+
+\vspace{0.15cm}\noindent \textbf{Emergent Visual Abilities and Limits of Foundation Models (EVAL-FoMo 2)} (\href{https://sites.google.com/view/eval-fomo-2-cvpr/home}{link}) [CVPR'25, ECCV'24]
+\textit{Relation:} This workshop focuses on analyzing and evaluating visual capabilities and limitations in foundation models through vision-centric benchmarks. While EVAL-FoMo 2 emphasizes evaluation methodologies and visual understanding, our workshop takes a broader perspective on multimodal foundation models, addressing model design, training paradigms, efficiency, ethics, and future directions across multiple modalities.
+
+\vspace{0.15cm}\noindent \textbf{Closing the Loop Between Vision and Language (CLVL)} (\href{https://iccv-clvl.github.io/2025/}{link}) [ICCV'25, ICCV'23, ICCV'21, ICCV'19, ICCV'17, ICCV'15]
+\textit{Relation:} This long-running workshop explores the intersection of computer vision and NLP, focusing on joint vision-language understanding tasks such as VQA, captioning, visual dialog, and text-to-image generation, with emphasis on bias, generalization, and explainability. While CLVL addresses specific vision-language tasks and challenges, our workshop takes a broader view of multimodal foundation models that span multiple modalities (vision, language, sound, robotics) and focuses on fundamental questions about model design, scaling, training paradigms, and the future directions of the field.
+
+
+\vspace{0.15cm}\noindent \textbf{Multimodal Learning and Applications Workshop (MuLa)} (\href{https://mula-workshop.github.io/}{link}) [CVPR'25, CVPR'24, CVPR'23, CVPR'22, CVPR'21, CVP'R20] 
+\textit{Relation:} This workshop focuses on the broad application of multimodal techniques for downstream tasks. Our proposal is more focused on multimodal methods and applications capitalizing on pre-trained FMs, their adaptation to other domains, and other innovative use cases.
+
+
+\vspace{0.15cm}\noindent \textbf{Multimodal Algorithmic Reasoning Workshop} (\href{https://marworkshop.github.io/}{link}) [NeurIPS'25, CVPR'25, NeurIPS'24, CVPR'24, ICCV'23]
+\textit{Relation:} The workshop focuses on algorithmic learning and multimodal reasoning. The emphasis is therefore more on multimodal algorithmic reasoning e.g. for planning and reasoning problems.
+
+\vspace{0.15cm}\noindent \textbf{Workshop on Sight and Sound} (\href{https://sightsound.org/}{link}) [CVPR'25, CVPR'24, CVPR'23, CVPR'22, CVPR'21, CVPR'20, CVPR'19, CVPR'18]
+\textit{Relation:} The Sight and Sound workshop focuses on learning from paired audio-visual data, especially the relationship between visual motion and sound. Multimodal FMs typically go beyond this, integrating 3 or more modalities.
+
+
+\vspace{0.15cm}\noindent \textbf{The Perception Test Challenge} (\href{https://perception-test-challenge.github.io/}{link}) [ICCV'25, ECCV'24, ECCV'22]
+\textit{Relation:} The Perception Test Challenge benchmarks multimodal models on video data, focusing on video reasoning tasks like video-QA, grounded video-QA, tracking, and localization. While it assesses current models on specific tasks, our workshop offers a broader perspective by bringing together diverse viewpoints, including representation learning and diffusion, to explore current possibilities and challenges in various computer vision fields.
+
+
+
+\bibliographystyle{alpha}
+\bibliography{sample}
+
+
+\end{document}
