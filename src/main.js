@@ -4,45 +4,45 @@ const speakers = [
     affiliation: "Stanford University",
     bio: "Assistant Professor focused on computer vision and deep learning in healthcare.",
     link: "https://ai.stanford.edu/~syyeung/",
-    image: "./assets/speakers/serena.jpg"
+    image: "./public/assets/speakers/serena.jpg"
   },
   {
     name: "Saining Xie",
     affiliation: "New York University",
     bio: "Assistant Professor at NYU Courant, expert in representation learning.",
     link: "https://www.sainingxie.com/",
-    image: "./assets/speakers/Saining-Xie-300x300.jpg"
+    image: "./public/assets/speakers/Saining-Xie-300x300.jpg"
   },
   {
     name: "Hadar Averbuch-Elor",
     affiliation: "Cornell University",
     bio: "Assistant Professor focused on graphics and vision with structured modalities.",
     link: "https://www.hadarelor.com/",
-    image: "./assets/speakers/hadar.jpg"
+    image: "./public/assets/speakers/hadar.jpg"
   },
   {
     name: "Trevor Darrell",
     affiliation: "UC Berkeley",
     bio: "Professor and co-lead of BAIR lab, pioneer in computer vision and multimodal learning.",
     link: "https://people.eecs.berkeley.edu/~trevor/",
-    image: "./assets/speakers/trevor_v2.png"
+    image: "./public/assets/speakers/trevor_v2.png"
   }
 ];
 
 const organizers = [
-  { name: "Edson Araujo", affiliation: "University of Tübingen", link: "https://edsonroteia.github.io/", image: "./assets/organizers/edson.jpeg" },
-  { name: "Roei Herzig", affiliation: "MIT-IBM Lab / UC Berkeley", link: "https://roeiherz.github.io/", image: "./assets/organizers/roei_square_bio.png" },
-  { name: "David Chan", affiliation: "UC Berkeley", link: "https://dchan.cc/", image: "./assets/organizers/david.jpeg" },
-  { name: "Bo Wu", affiliation: "MIT-IBM Watson AI Lab", link: "https://bobbywu.com/", image: "./assets/organizers/bobbywu.jpg" },
-  { name: "Tsung-Han (Patrick) Wu", affiliation: "UC Berkeley", link: "https://tsunghan-wu.github.io/", image: "./assets/organizers/patrick.jpg" },
-  { name: "Dantong Niu", affiliation: "UC Berkeley", link: "https://dantong88.github.io/", image: "./assets/organizers/dantong.jpeg" },
-  { name: "Jiaxin Ge", affiliation: "UC Berkeley", link: "https://gejiaxin.org/", image: "./assets/organizers/jiaxin.jpg" },
-  { name: "Eli Schwartz", affiliation: "IBM Research / TAU", link: "https://eli-schwartz.com/", image: "./assets/organizers/eli.jpg" },
-  { name: "Nimrod Shabtay", affiliation: "IBM Reasearch / Tel-Aviv University", link: "https://www.linkedin.com/in/nimrod-shabtay/", image: "./assets/organizers/nimrod.jpeg" },
-  { name: "Sivan Doveh", affiliation: "Stanford University", link: "https://sivandoveh.github.io/", image: "./assets/organizers/sivan.jpeg" },
-  { name: "Jehanzeb Mirza", affiliation: "MIT CSAIL", link: "https://jmiemirza.github.io/", image: "./assets/organizers/mirza.png" },
-  { name: "Rogerio Feris", affiliation: "MIT-IBM Lab", link: "http://www.rogerioferis.org", image: "./assets/organizers/rogerio.avif" },
-  { name: "Hilde Kuehne", affiliation: "Tuebingen AI Center / MIT-IBM", link: "https://hildekuehne.github.io/", image: "./assets/organizers/Hilde.jpg" }
+  { name: "Edson Araujo", affiliation: "University of Tübingen", link: "https://edsonroteia.github.io/", image: "./public/assets/organizers/edson.jpeg" },
+  { name: "Roei Herzig", affiliation: "MIT-IBM Lab / UC Berkeley", link: "https://roeiherz.github.io/", image: "./public/assets/organizers/roei_square_bio.png" },
+  { name: "David Chan", affiliation: "UC Berkeley", link: "https://dchan.cc/", image: "./public/assets/organizers/david.jpeg" },
+  { name: "Bo Wu", affiliation: "MIT-IBM Watson AI Lab", link: "https://bobbywu.com/", image: "./public/assets/organizers/bobbywu.jpg" },
+  { name: "Tsung-Han (Patrick) Wu", affiliation: "UC Berkeley", link: "https://tsunghan-wu.github.io/", image: "./public/assets/organizers/patrick.jpg" },
+  { name: "Dantong Niu", affiliation: "UC Berkeley", link: "https://dantong88.github.io/", image: "./public/assets/organizers/dantong.jpeg" },
+  { name: "Jiaxin Ge", affiliation: "UC Berkeley", link: "https://gejiaxin.org/", image: "./public/assets/organizers/jiaxin.jpg" },
+  { name: "Eli Schwartz", affiliation: "IBM Research / TAU", link: "https://eli-schwartz.com/", image: "./public/assets/organizers/eli.jpg" },
+  { name: "Nimrod Shabtay", affiliation: "IBM Reasearch / Tel-Aviv University", link: "https://www.linkedin.com/in/nimrod-shabtay/", image: "./public/assets/organizers/nimrod.jpeg" },
+  { name: "Sivan Doveh", affiliation: "Stanford University", link: "https://sivandoveh.github.io/", image: "./public/assets/organizers/sivan.jpeg" },
+  { name: "Jehanzeb Mirza", affiliation: "MIT CSAIL", link: "https://jmiemirza.github.io/", image: "./public/assets/organizers/mirza.png" },
+  { name: "Rogerio Feris", affiliation: "MIT-IBM Lab", link: "http://www.rogerioferis.org", image: "./public/assets/organizers/rogerio.avif" },
+  { name: "Hilde Kuehne", affiliation: "Tuebingen AI Center / MIT-IBM", link: "https://hildekuehne.github.io/", image: "./public/assets/organizers/Hilde.jpg" }
 ];
 
 const schedule = [
