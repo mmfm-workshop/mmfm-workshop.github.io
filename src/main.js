@@ -45,6 +45,14 @@ const organizers = [
   { name: "Hilde Kuehne", affiliation: "Tuebingen AI Center / MIT-IBM", link: "https://hildekuehne.github.io/", image: "./public/assets/organizers/Hilde.jpg" }
 ];
 
+const LINK_ICON = `
+  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+    <polyline points="15 3 21 3 21 9"></polyline>
+    <line x1="10" y1="14" x2="21" y2="3"></line>
+  </svg>
+`;
+
 const schedule = [
   { time: "08:30 AM", title: "Welcome & Opening Remarks", description: "Edson Araujo (University of Tübingen)" },
   { time: "08:35 AM", title: "Keynote Talk 1", speakerIndex: 0, duration: "25min + 5min Q&A" },
@@ -55,14 +63,6 @@ const schedule = [
   { time: "11:50 AM", type: "highlight", title: "Panel Discussion: What is Next in Multimodal Foundation Models?", description: "Moderator: Edson Araujo. Panelists: All invited speakers." },
   { time: "12:50 PM", title: "Concluding Remarks", description: "10min summary" }
 ];
-
-const LINK_ICON = `
-  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="external-link-icon">
-    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-    <polyline points="15 3 21 3 21 9"></polyline>
-    <line x1="10" y1="14" x2="21" y2="3"></line>
-  </svg>
-`;
 
 function renderSpeakers() {
   const grid = document.getElementById('speakers-grid');
@@ -78,7 +78,6 @@ function renderSpeakers() {
         <p class="affiliation">${s.affiliation}</p>
         <p class="bio">${s.bio}</p>
       </div>
-      <a href="${s.link}" target="_blank" class="card-link-icon" title="Visit Website">${LINK_ICON}</a>
     </div>
   `).join('');
 }
