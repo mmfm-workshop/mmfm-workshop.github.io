@@ -31,7 +31,7 @@ const speakers = [
 
 const organizers = [
   { name: "Edson Araujo", affiliation: "University of Tübingen", link: "https://edsonroteia.github.io/", image: "./public/assets/organizers/edson.jpeg" },
-  { name: "Roei Herzig", affiliation: "MIT-IBM Lab / UC Berkeley", link: "https://roeiherz.github.io/", image: "./public/assets/organizers/roei_square_bio.png" },
+  { name: "Roei Herzig", affiliation: "MIT-IBM Lab / UC Berkeley", link: "https://roeiherz.github.io/", image: "./public/assets/organizers/roei_square_bio.jpg" },
   { name: "David Chan", affiliation: "UC Berkeley", link: "https://dchan.cc/", image: "./public/assets/organizers/david.jpeg" },
   { name: "Bo Wu", affiliation: "MIT-IBM Watson AI Lab", link: "https://bobbywu.com/", image: "./public/assets/organizers/bobbywu.jpg" },
   { name: "Tsung-Han (Patrick) Wu", affiliation: "UC Berkeley", link: "https://tsunghan-wu.github.io/", image: "./public/assets/organizers/patrick.jpg" },
@@ -40,7 +40,7 @@ const organizers = [
   { name: "Eli Schwartz", affiliation: "IBM Research / TAU", link: "https://eli-schwartz.com/", image: "./public/assets/organizers/eli.jpg" },
   { name: "Nimrod Shabtay", affiliation: "IBM Reasearch / Tel-Aviv University", link: "https://www.linkedin.com/in/nimrod-shabtay/", image: "./public/assets/organizers/nimrod.jpeg" },
   { name: "Sivan Doveh", affiliation: "Stanford University", link: "https://sivandoveh.github.io/", image: "./public/assets/organizers/sivan.jpeg" },
-  { name: "Jehanzeb Mirza", affiliation: "MIT CSAIL", link: "https://jmiemirza.github.io/", image: "./public/assets/organizers/mirza.png" },
+  { name: "Jehanzeb Mirza", affiliation: "MIT CSAIL", link: "https://jmiemirza.github.io/", image: "./public/assets/organizers/mirza.jpg" },
   { name: "Rogerio Feris", affiliation: "MIT-IBM Lab", link: "http://www.rogerioferis.org", image: "./public/assets/organizers/rogerio.avif" },
   { name: "Hilde Kuehne", affiliation: "Tuebingen AI Center / MIT-IBM", link: "https://hildekuehne.github.io/", image: "./public/assets/organizers/Hilde.jpg" }
 ];
@@ -71,7 +71,7 @@ function renderSpeakers() {
   grid.innerHTML = speakers.map(s => `
     <div class="speaker-card">
       <div class="speaker-avatar">
-        <img src="${s.image}" alt="${s.name}" class="speaker-img">
+        <img src="${s.image}" alt="${s.name}" class="speaker-img" loading="lazy">
       </div>
       <div class="speaker-info">
         <h3><a href="${s.link}" target="_blank" class="name-link">${s.name}</a></h3>
@@ -94,13 +94,13 @@ function renderSchedule() {
     if (item.speakerIndex !== undefined) {
       const speaker = speakers[item.speakerIndex];
       content += `<p>${speaker.name} (${speaker.affiliation})<br>${item.duration}</p>`;
-      speakerImg = `<img src="${speaker.image}" alt="${speaker.name}" class="schedule-speaker-img">`;
+      speakerImg = `<img src="${speaker.image}" alt="${speaker.name}" class="schedule-speaker-img" loading="lazy">`;
     } else if (item.type === 'highlight') {
       content += `<p>${item.description}</p>`;
       speakerImg = `
         <div class="panel-grid">
           ${speakers.slice(0, 4).map(s => `
-            <img src="${s.image}" alt="${s.name}" class="panel-img" title="${s.name}">
+            <img src="${s.image}" alt="${s.name}" class="panel-img" title="${s.name}" loading="lazy">
           `).join('')}
         </div>
       `;
@@ -130,7 +130,7 @@ function renderOrganizers() {
   grid.innerHTML = organizers.map(o => `
     <div class="organizer-card">
       <div class="organizer-avatar">
-        ${o.image ? `<img src="${o.image}" alt="${o.name}" class="organizer-img">` : `<div class="organizer-placeholder">${o.name.charAt(0)}</div>`}
+        ${o.image ? `<img src="${o.image}" alt="${o.name}" class="organizer-img" loading="lazy">` : `<div class="organizer-placeholder">${o.name.charAt(0)}</div>`}
       </div>
       <div class="organizer-info">
         <h4><a href="${o.link}" target="_blank" class="name-link">${o.name}</a></h4>
