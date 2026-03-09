@@ -100,11 +100,41 @@ h3,
     padding: 0 var(--space-xl);
 }
 
+/* Deadline Banner */
+.deadline-banner {
+    background: #b45309;
+    color: white;
+    font-size: 0.9rem;
+    padding: 0.55rem 0;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(180, 83, 9, 0.3);
+}
+
+.deadline-banner-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-lg);
+}
+
+.deadline-banner-link {
+    color: white;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    white-space: nowrap;
+    transition: opacity var(--transition-fast);
+}
+
+.deadline-banner-link:hover {
+    opacity: 0.85;
+}
+
+
 /* Navbar */
 .navbar {
-    position: fixed;
+    position: sticky;
     top: 0;
-    left: 0;
     width: 100%;
     height: var(--header-height);
     background: var(--nav-bg);
@@ -215,7 +245,7 @@ h3,
     min-height: 44vh;
     display: flex;
     align-items: center;
-    padding-top: calc(var(--header-height) + var(--space-xl));
+    padding-top: var(--space-xl);
     padding-bottom: var(--space-xl);
     color: white;
     overflow: hidden;
@@ -652,6 +682,12 @@ h3,
     margin-bottom: 0;
 }
 
+.cfp-review-info {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
 .track-card h3 {
     margin-bottom: var(--space-sm);
     color: var(--text-primary);
@@ -892,6 +928,15 @@ h3,
 }
 
 @media (max-width: 1080px) {
+    .deadline-banner {
+        font-size: 0.8rem;
+        padding: 0.5rem 0;
+    }
+
+    .deadline-banner-content {
+        gap: var(--space-sm);
+    }
+
     .container {
         padding: 0 var(--space-lg);
     }
@@ -984,7 +1029,6 @@ h3,
     .hero {
         min-height: 48vh;
         text-align: center;
-        padding-top: 76px;
     }
 
     .hero::after {
