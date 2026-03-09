@@ -146,6 +146,54 @@ document.addEventListener('DOMContentLoaded', () => {
   renderSchedule();
   renderOrganizers();
 
+  // Deadline time tooltips — show local timezone on hover
+  const tooltip = document.createElement('span');
+  tooltip.className = 'deadline-tooltip';
+  document.body.appendChild(tooltip);
+
+  function positionTooltip(el) {
+    const rect = el.getBoundingClientRect();
+    const tw = tooltip.offsetWidth;
+    const th = tooltip.offsetHeight;
+    const gap = 6;
+
+    // Prefer above, fall back to below if not enough space
+    let top;
+    if (rect.top - th - gap >= 0) {
+      top = rect.top - th - gap;
+    } else {
+      top = rect.bottom + gap;
+    }
+
+    // Center horizontally, clamp to viewport
+    let left = rect.left + rect.width / 2 - tw / 2;
+    left = Math.max(8, Math.min(left, window.innerWidth - tw - 8));
+
+    tooltip.style.top = top + 'px';
+    tooltip.style.left = left + 'px';
+  }
+
+  document.querySelectorAll('.deadline-time[data-utc]').forEach(el => {
+    const utc = new Date(el.dataset.utc);
+    const local = utc.toLocaleString(undefined, {
+      month: 'long', day: 'numeric', year: 'numeric',
+      hour: '2-digit', minute: '2-digit', timeZoneName: 'short'
+    });
+    const text = local + ' (your local time)';
+
+    el.addEventListener('mouseenter', () => {
+      tooltip.textContent = text;
+      // Allow layout to update before measuring and positioning
+      requestAnimationFrame(() => {
+        positionTooltip(el);
+        tooltip.classList.add('visible');
+      });
+    });
+    el.addEventListener('mouseleave', () => {
+      tooltip.classList.remove('visible');
+    });
+  });
+
   // Mobile Menu Toggle
   const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
   const navLinks = document.querySelector('.nav-links');

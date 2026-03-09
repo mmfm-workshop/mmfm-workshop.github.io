@@ -117,6 +117,33 @@ h3,
     gap: var(--space-lg);
 }
 
+/* Deadline time tooltip */
+.deadline-time {
+    text-decoration: underline dotted;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1.5px;
+    cursor: help;
+}
+
+.deadline-tooltip {
+    position: fixed;
+    background: var(--text-primary);
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0.35rem 0.65rem;
+    border-radius: 6px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--transition-fast);
+    z-index: 2000;
+}
+
+.deadline-tooltip.visible {
+    opacity: 1;
+}
+
 .deadline-banner-link {
     color: white;
     font-weight: 700;
