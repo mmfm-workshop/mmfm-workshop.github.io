@@ -7,11 +7,12 @@ const speakers = [
     image: "./public/assets/speakers/serena.jpg"
   },
   {
-    name: "Saining Xie",
-    affiliation: "New York University",
-    bio: "Assistant Professor at NYU Courant, expert in representation learning.",
-    link: "https://www.sainingxie.com/",
-    image: "./public/assets/speakers/Saining-Xie-300x300.jpg"
+    name: "TBD",
+    affiliation: "To be announced",
+    bio: "Speaker to be announced soon.",
+    link: null,
+    image: null,
+    tbd: true
   },
   {
     name: "Hadar Averbuch-Elor",
@@ -54,14 +55,14 @@ const LINK_ICON = `
 `;
 
 const schedule = [
-  { time: "08:30 AM", title: "Welcome & Opening Remarks", description: "Edson Araujo (University of Tübingen)" },
-  { time: "08:35 AM", title: "Keynote Talk 1", speakerIndex: 0, duration: "25min + 5min Q&A" },
-  { time: "09:05 AM", title: "Keynote Talk 2", speakerIndex: 1, duration: "25min + 5min Q&A" },
-  { time: "09:35 AM", type: "break", title: "Poster Session & Coffee Break", description: "1h 15min of networking and poster presentations" },
-  { time: "10:50 AM", title: "Keynote Talk 3", speakerIndex: 2, duration: "25min + 5min Q&A" },
-  { time: "11:20 AM", title: "Keynote Talk 4", speakerIndex: 3, duration: "25min + 5min Q&A" },
-  { time: "11:50 AM", type: "highlight", title: "Panel Discussion: What is Next in Multimodal Foundation Models?", description: "Moderator: Edson Araujo. Panelists: All invited speakers." },
-  { time: "12:50 PM", title: "Concluding Remarks", description: "10min summary" }
+  { time: "01:00 PM", title: "Welcome & Opening Remarks", description: "Edson Araujo (University of Tübingen)" },
+  { time: "01:05 PM", title: "Keynote Talk 1", speakerIndex: 0, duration: "25min + 5min Q&A" },
+  { time: "01:35 PM", title: "Keynote Talk 2", speakerIndex: 1, duration: "25min + 5min Q&A" },
+  { time: "02:05 PM", type: "break", title: "Poster Session & Coffee Break", description: "1h 30min of networking and poster presentations" },
+  { time: "03:35 PM", title: "Keynote Talk 3", speakerIndex: 2, duration: "25min + 5min Q&A" },
+  { time: "04:05 PM", title: "Keynote Talk 4", speakerIndex: 3, duration: "25min + 5min Q&A" },
+  { time: "04:35 PM", type: "highlight", title: "Panel Discussion: What is Next in Multimodal Foundation Models?", description: "Moderator: Edson Araujo. Panelists: All invited speakers." },
+  { time: "05:50 PM", title: "Concluding Remarks", description: "10min summary" }
 ];
 
 function renderSpeakers() {
@@ -71,10 +72,12 @@ function renderSpeakers() {
   grid.innerHTML = speakers.map(s => `
     <div class="speaker-card">
       <div class="speaker-avatar">
-        <img src="${s.image}" alt="${s.name}" class="speaker-img" loading="lazy">
+        ${s.image
+          ? `<img src="${s.image}" alt="${s.name}" class="speaker-img" loading="lazy">`
+          : `<div class="speaker-placeholder">TBD</div>`}
       </div>
       <div class="speaker-info">
-        <h3><a href="${s.link}" target="_blank" class="name-link">${s.name}</a></h3>
+        <h3>${s.link ? `<a href="${s.link}" target="_blank" class="name-link">${s.name}</a>` : s.name}</h3>
         <p class="affiliation">${s.affiliation}</p>
         <p class="bio">${s.bio}</p>
       </div>
@@ -93,14 +96,17 @@ function renderSchedule() {
     if (item.speakerIndex !== undefined) {
       const speaker = speakers[item.speakerIndex];
       content += `<p>${speaker.name} (${speaker.affiliation})<br>${item.duration}</p>`;
-      speakerImg = `<img src="${speaker.image}" alt="${speaker.name}" class="schedule-speaker-img" loading="lazy">`;
+      speakerImg = speaker.image
+        ? `<img src="${speaker.image}" alt="${speaker.name}" class="schedule-speaker-img" loading="lazy">`
+        : `<div class="schedule-speaker-img schedule-speaker-placeholder">TBD</div>`;
     } else if (item.type === 'highlight') {
       content += `<p>${item.description}</p>`;
       speakerImg = `
         <div class="panel-grid">
-          ${speakers.slice(0, 4).map(s => `
-            <img src="${s.image}" alt="${s.name}" class="panel-img" title="${s.name}" loading="lazy">
-          `).join('')}
+          ${speakers.slice(0, 4).map(s => s.image
+            ? `<img src="${s.image}" alt="${s.name}" class="panel-img" title="${s.name}" loading="lazy">`
+            : `<div class="panel-img panel-img-placeholder" title="${s.name}">TBD</div>`
+          ).join('')}
         </div>
       `;
     } else {
