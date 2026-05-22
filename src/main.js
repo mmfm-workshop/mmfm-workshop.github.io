@@ -7,12 +7,11 @@ const speakers = [
     image: "./public/assets/speakers/serena.jpg"
   },
   {
-    name: "TBD",
-    affiliation: "To be announced",
-    bio: "Speaker to be announced soon.",
-    link: null,
-    image: null,
-    tbd: true
+    name: "Vincent Sitzmann",
+    affiliation: "MIT EECS",
+    bio: "Assistant Professor at MIT leading the Scene Representation Group at CSAIL, focused on world models for graphics, vision, and robotics.",
+    link: "https://www.vincentsitzmann.com/",
+    image: "./public/assets/speakers/vincent.jpg"
   },
   {
     name: "Hadar Averbuch-Elor",
