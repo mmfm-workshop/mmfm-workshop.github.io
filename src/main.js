@@ -26,6 +26,13 @@ const speakers = [
     bio: "Professor and co-lead of BAIR lab, pioneer in computer vision and multimodal learning.",
     link: "https://people.eecs.berkeley.edu/~trevor/",
     image: "./public/assets/speakers/trevor_v2.png"
+  },
+  {
+    name: "Shuai Bai",
+    affiliation: "Alibaba Group",
+    bio: "Technical lead of Qwen-VL at the Qwen Team, Alibaba, focused on multimodal foundation models for visual understanding, reasoning, and agents.",
+    link: "https://scholar.google.com/citations?user=ylhI1JsAAAAJ",
+    image: "./public/assets/speakers/shuai-bai.jpg"
   }
 ];
 
@@ -57,11 +64,12 @@ const schedule = [
   { time: "01:00 PM", title: "Welcome & Opening Remarks", description: "Edson Araujo (University of Tübingen)" },
   { time: "01:05 PM", title: "Keynote Talk 1", speakerIndex: 0, duration: "25min + 5min Q&A" },
   { time: "01:35 PM", title: "Keynote Talk 2", speakerIndex: 1, duration: "25min + 5min Q&A" },
-  { time: "02:05 PM", type: "break", title: "Poster Session & Coffee Break", description: "1h 30min of networking and poster presentations" },
-  { time: "03:35 PM", title: "Keynote Talk 3", speakerIndex: 2, duration: "25min + 5min Q&A" },
-  { time: "04:05 PM", title: "Keynote Talk 4", speakerIndex: 3, duration: "25min + 5min Q&A" },
-  { time: "04:35 PM", type: "highlight", title: "Panel Discussion: What is Next in Multimodal Foundation Models?", description: "Moderator: Edson Araujo. Panelists: All invited speakers." },
-  { time: "05:50 PM", title: "Concluding Remarks", description: "10min summary" }
+  { time: "02:05 PM", title: "Keynote Talk 3", speakerIndex: 2, duration: "25min + 5min Q&A" },
+  { time: "02:35 PM", type: "break", title: "Poster Session & Coffee Break", description: "Posters & networking; coffee served 3:00–4:00 PM" },
+  { time: "04:00 PM", title: "Keynote Talk 4", speakerIndex: 3, duration: "25min + 5min Q&A" },
+  { time: "04:30 PM", title: "Keynote Talk 5", speakerIndex: 4, duration: "25min + 5min Q&A" },
+  { time: "05:00 PM", type: "highlight", title: "Panel Discussion: What is Next in Multimodal Foundation Models?", description: "Moderator: Edson Araujo. Panelists: All invited speakers." },
+  { time: "05:55 PM", title: "Concluding Remarks", description: "5min summary" }
 ];
 
 function renderSpeakers() {
@@ -102,7 +110,7 @@ function renderSchedule() {
       content += `<p>${item.description}</p>`;
       speakerImg = `
         <div class="panel-grid">
-          ${speakers.slice(0, 4).map(s => s.image
+          ${speakers.map(s => s.image
             ? `<img src="${s.image}" alt="${s.name}" class="panel-img" title="${s.name}" loading="lazy">`
             : `<div class="panel-img panel-img-placeholder" title="${s.name}">TBD</div>`
           ).join('')}
