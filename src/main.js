@@ -64,9 +64,9 @@ const schedule = [
   { time: "01:00 PM", title: "Welcome & Opening Remarks", description: "Edson Araujo (University of Tübingen)" },
   { time: "01:05 PM", title: "Keynote Talk 1", speakerIndex: 0, duration: "25min + 5min Q&A" },
   { time: "01:35 PM", title: "Keynote Talk 2", speakerIndex: 1, duration: "25min + 5min Q&A" },
-  { time: "02:05 PM", title: "Keynote Talk 3", speakerIndex: 2, duration: "25min + 5min Q&A" },
+  { time: "02:05 PM", title: "Keynote Talk 3", speakerIndex: 3, duration: "25min + 5min Q&A" },
   { time: "02:35 PM", type: "break", title: "Poster Session & Coffee Break", description: "Posters & networking; coffee served 3:00–4:00 PM" },
-  { time: "04:00 PM", title: "Keynote Talk 4", speakerIndex: 3, duration: "25min + 5min Q&A" },
+  { time: "04:00 PM", title: "Keynote Talk 4", speakerIndex: 2, duration: "25min + 5min Q&A" },
   { time: "04:30 PM", title: "Keynote Talk 5", speakerIndex: 4, duration: "25min + 5min Q&A" },
   { time: "05:00 PM", type: "highlight", title: "Panel Discussion: What is Next in Multimodal Foundation Models?", description: "Moderator: Edson Araujo. Panelists: All invited speakers." },
   { time: "05:55 PM", title: "Concluding Remarks", description: "5min summary" }
