@@ -589,9 +589,59 @@ h3,
     margin-bottom: var(--space-sm);
 }
 
+.talk-title {
+    color: var(--text-primary);
+    font-style: italic;
+    font-weight: 500;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin-bottom: var(--space-sm);
+}
+
 .bio {
     color: var(--text-secondary);
     font-size: 0.9rem;
+    line-height: 1.55;
+}
+
+.abstract {
+    margin-top: var(--space-sm);
+    font-size: 0.85rem;
+}
+
+.abstract > summary {
+    color: var(--accent-link);
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: color var(--transition-fast);
+}
+
+.abstract > summary::-webkit-details-marker {
+    display: none;
+}
+
+.abstract > summary::after {
+    content: "\25be";
+    font-size: 0.7em;
+    transition: transform var(--transition-fast);
+}
+
+.abstract[open] > summary::after {
+    transform: rotate(180deg);
+}
+
+.abstract > summary:hover {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.abstract > p {
+    margin-top: var(--space-sm);
+    color: var(--text-secondary);
     line-height: 1.55;
 }
 
@@ -667,10 +717,11 @@ h3,
 }
 
 .panel-grid {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     justify-content: center;
     align-content: center;
+    justify-items: center;
     gap: 4px;
     width: 56px;
 }

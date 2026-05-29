@@ -16,9 +16,11 @@ const speakers = [
   {
     name: "Hadar Averbuch-Elor",
     affiliation: "Cornell University",
-    bio: "Assistant Professor at Cornell Tech focused on multimodal computer vision and graphics.",
+    bio: "Assistant Professor in Computer Science at Cornell University and Cornell Tech. Her research combines images, language, and 3D geometry to build multimodal perception systems for the full complexity of the real 3D world.",
     link: "https://www.hadarelor.com/",
-    image: "./public/assets/speakers/hadar.jpg"
+    image: "./public/assets/speakers/hadar.jpg",
+    talkTitle: "What Do Multimodal Foundation Models Learn Beyond What We Ask?",
+    talkAbstract: "Multimodal foundation models have rapidly transformed computer vision and graphics, driving major advances across a wide range of visual tasks. But beyond their impressive performance on standard benchmarks, what additional structure and capabilities emerge during large-scale pretraining? In this talk, I will present two case studies that explore this question across two very different types of multimodal foundation models: text-to-image generative models on the one hand and 3D reconstruction models on the other. Together, these studies suggest that multimodal foundation models often acquire latent structure beyond what they were explicitly trained for, opening up new opportunities to uncover and leverage such emergent capabilities."
   },
   {
     name: "Trevor Darrell",
@@ -30,9 +32,11 @@ const speakers = [
   {
     name: "Shuai Bai",
     affiliation: "Alibaba Group",
-    bio: "Technical lead of Qwen-VL at the Qwen Team, Alibaba, focused on multimodal foundation models for visual understanding, reasoning, and agents.",
+    bio: "Technical lead of Qwen-VL at the Qwen Team, Alibaba. His work focuses on multimodal foundation models, including visual understanding, multimodal reasoning, and visual agents, and on the Qwen-VL series across real-world multimodal scenarios.",
     link: "https://scholar.google.com/citations?user=ylhI1JsAAAAJ",
-    image: "./public/assets/speakers/shuai-bai.jpg"
+    image: "./public/assets/speakers/shuai-bai.jpg",
+    talkTitle: "From Multimodal Understanding to Agentic Visual Intelligence",
+    talkAbstract: "Multimodal foundation models are rapidly evolving from systems that understand visual inputs into systems that can reason, use tools, and act in complex real-world environments. In this talk, I will discuss this transition from perception to reasoning and agentic action, drawing on our experience building Qwen-VL. I will cover several emerging directions, including real-world visual understanding, multimodal reasoning, visual coding, GUI agents, document and video agents, and multimodal search. I will also discuss why evaluation needs to move beyond isolated benchmarks toward task-oriented, workflow-level, and agentic assessments. Finally, I will share some perspectives on what may come next for multimodal foundation models and how these systems can become more useful in real-world applications."
   }
 ];
 
@@ -86,7 +90,13 @@ function renderSpeakers() {
       <div class="speaker-info">
         <h3>${s.link ? `<a href="${s.link}" target="_blank" class="name-link">${s.name}</a>` : s.name}</h3>
         <p class="affiliation">${s.affiliation}</p>
+        ${s.talkTitle ? `<p class="talk-title">&ldquo;${s.talkTitle}&rdquo;</p>` : ''}
         <p class="bio">${s.bio}</p>
+        ${s.talkAbstract ? `
+          <details class="abstract">
+            <summary>Read abstract</summary>
+            <p>${s.talkAbstract}</p>
+          </details>` : ''}
       </div>
     </div>
   `).join('');
@@ -110,7 +120,7 @@ function renderSchedule() {
       content += `<p>${item.description}</p>`;
       speakerImg = `
         <div class="panel-grid">
-          ${speakers.map(s => s.image
+          ${speakers.filter(s => s.name !== "Shuai Bai").map(s => s.image
             ? `<img src="${s.image}" alt="${s.name}" class="panel-img" title="${s.name}" loading="lazy">`
             : `<div class="panel-img panel-img-placeholder" title="${s.name}">TBD</div>`
           ).join('')}
