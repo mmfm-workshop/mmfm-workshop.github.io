@@ -2,9 +2,11 @@ const speakers = [
   {
     name: "Serena Yeung-Levy",
     affiliation: "Stanford University",
-    bio: "Assistant Professor focused on computer vision and deep learning in healthcare.",
+    bio: "Assistant Professor of Biomedical Data Science and, by courtesy, of Computer Science and Electrical Engineering at Stanford University, and a Chan Zuckerberg Biohub San Francisco Investigator. Her research spans deep learning, computer vision, and multimodal modeling, with applications to biomedicine.",
     link: "https://ai.stanford.edu/~syyeung/",
-    image: "./public/assets/speakers/serena.jpg"
+    image: "./public/assets/speakers/serena.jpg",
+    talkTitle: "Multimodal Generative Models Towards Generating Biomedical Insights",
+    talkAbstract: "In this talk, I will discuss where we are and where we still need to go toward multimodal generative models that can provide utility in generating scientific insights in biomedicine. I will explore two major directions: VQA models that can aid in data interpretation, and image-generative virtual cell models that can visually simulate the effects of genetic and drug perturbations."
   },
   {
     name: "Vincent Sitzmann",
