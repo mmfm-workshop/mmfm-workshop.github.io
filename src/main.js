@@ -6,7 +6,7 @@ const speakers = [
     link: "https://ai.stanford.edu/~syyeung/",
     image: "./public/assets/speakers/serena.jpg",
     talkTitle: "Multimodal Generative Models Towards Generating Biomedical Insights",
-    talkAbstract: "In this talk, I will discuss where we are and where we still need to go toward multimodal generative models that can provide utility in generating scientific insights in biomedicine. I will explore two major directions: VQA models that can aid in data interpretation, and image-generative virtual cell models that can visually simulate the effects of genetic and drug perturbations."
+    talkAbstract: "This talk will discuss where we are and where we still need to go towards multimodal generative models that can provide utility in generating scientific insights in biomedicine. It will explore two major directions: VQA models that can aid in data interpretation, and image generative virtual cell models that can visually simulate the effect of genetic and drug perturbations."
   },
   {
     name: "Vincent Sitzmann",
