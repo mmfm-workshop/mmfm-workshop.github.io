@@ -74,9 +74,22 @@ const schedule = [
   { time: "02:35 PM", type: "break", title: "Poster Session & Coffee Break", description: "Posters & networking; coffee served 3:00–4:00 PM" },
   { time: "04:00 PM", title: "Keynote Talk 4", speakerIndex: 2, duration: "25min + 5min Q&A" },
   { time: "04:30 PM", title: "Keynote Talk 5", speakerIndex: 4, duration: "25min + 5min Q&A" },
-  { time: "05:00 PM", type: "highlight", title: "Panel Discussion: What is Next in Multimodal Foundation Models?", description: "Moderator: Edson Araujo. Panelists: All invited speakers." },
+  { time: "05:00 PM", type: "highlight", title: "Panel Discussion: What is Next in Multimodal Foundation Models?", description: "Moderator: Edson Araujo. Panelists: Vincent Sitzmann, Trevor Darrell, Hadar Averbuch-Elor & Zhibo Yang (Qwen Team, Alibaba)." },
   { time: "05:55 PM", title: "Concluding Remarks", description: "5min summary" }
 ];
+
+// Panelists for the 5:00 PM panel. Serena and Shuai are not on the panel;
+// Zhibo Yang (Qwen Team, Alibaba) joins on behalf of the Qwen team.
+const panelists = [
+  speakers.find(s => s.name === "Vincent Sitzmann"),
+  speakers.find(s => s.name === "Trevor Darrell"),
+  speakers.find(s => s.name === "Hadar Averbuch-Elor"),
+  { name: "Zhibo Yang", affiliation: "Qwen Team, Alibaba", image: "./public/assets/speakers/zhibo.jpg" }
+];
+
+function initials(name) {
+  return name.split(/\s+/).map(w => w[0]).join('').slice(0, 2).toUpperCase();
+}
 
 function renderSpeakers() {
   const grid = document.getElementById('speakers-grid');
@@ -122,9 +135,9 @@ function renderSchedule() {
       content += `<p>${item.description}</p>`;
       speakerImg = `
         <div class="panel-grid">
-          ${speakers.filter(s => s.name !== "Shuai Bai").map(s => s.image
-            ? `<img src="${s.image}" alt="${s.name}" class="panel-img" title="${s.name}" loading="lazy">`
-            : `<div class="panel-img panel-img-placeholder" title="${s.name}">TBD</div>`
+          ${panelists.map(p => p.image
+            ? `<img src="${p.image}" alt="${p.name}" class="panel-img" title="${p.name}" loading="lazy">`
+            : `<div class="panel-img panel-img-placeholder" title="${p.name}">${initials(p.name)}</div>`
           ).join('')}
         </div>
       `;
