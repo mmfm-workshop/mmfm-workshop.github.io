@@ -219,6 +219,48 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Announcement Popup — shown on every page load
+  const announceOverlay = document.getElementById('announce-overlay');
+  if (announceOverlay) {
+    const closeBtn = document.getElementById('announce-close');
+    const ctaBtn = document.getElementById('announce-cta');
+    let lastFocused = null;
+
+    const openAnnounce = () => {
+      lastFocused = document.activeElement;
+      announceOverlay.hidden = false;
+      document.body.style.overflow = 'hidden';
+      requestAnimationFrame(() => {
+        announceOverlay.classList.add('visible');
+        ctaBtn?.focus();
+      });
+    };
+
+    const closeAnnounce = () => {
+      announceOverlay.classList.remove('visible');
+      document.body.style.overflow = '';
+      const onEnd = () => {
+        announceOverlay.hidden = true;
+        announceOverlay.removeEventListener('transitionend', onEnd);
+        if (lastFocused && typeof lastFocused.focus === 'function') lastFocused.focus();
+      };
+      announceOverlay.addEventListener('transitionend', onEnd);
+      // Fallback in case transitionend doesn't fire (e.g. reduced motion)
+      setTimeout(onEnd, 400);
+    };
+
+    closeBtn?.addEventListener('click', closeAnnounce);
+    ctaBtn?.addEventListener('click', closeAnnounce);
+    announceOverlay.addEventListener('click', (e) => {
+      if (e.target === announceOverlay) closeAnnounce();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !announceOverlay.hidden) closeAnnounce();
+    });
+
+    openAnnounce();
+  }
+
   // Mobile Menu Toggle
   const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
   const navLinks = document.querySelector('.nav-links');

@@ -60,7 +60,7 @@
                         <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                         <circle cx="12" cy="10" r="3"></circle>
                     </svg>
-                    <span>Colorado Convention Center (Rooms 3A-3D)</span>
+                    <span>Colorado Convention Center · Four Seasons 4</span>
                 </div>
             </div>
             <div class="hero-btns">
@@ -208,6 +208,68 @@
             </div>
         </div>
     </footer>
+
+    <div class="announce-overlay" id="announce-overlay" hidden>
+        <div class="announce-modal" role="dialog" aria-modal="true" aria-labelledby="announce-title"
+            aria-describedby="announce-body">
+            <button class="announce-close" id="announce-close" aria-label="Close announcement">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <div class="announce-badge">Update</div>
+            <h2 class="announce-title" id="announce-title">Workshop Room &amp; Poster Session</h2>
+            <div class="announce-body" id="announce-body">
+                <div class="announce-card">
+                    <div class="announce-icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="announce-label">Date</span>
+                        <strong class="announce-value">June 3, 2026</strong>
+                        <span class="announce-sub">Afternoon</span>
+                    </div>
+                </div>
+                <div class="announce-card">
+                    <div class="announce-icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="announce-label">New workshop room</span>
+                        <strong class="announce-value">Four Seasons 4</strong>
+                    </div>
+                </div>
+                <div class="announce-card">
+                    <div class="announce-icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="3" y1="9" x2="21" y2="9"></line>
+                            <line x1="9" y1="21" x2="9" y2="9"></line>
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="announce-label">Poster session</span>
+                        <strong class="announce-value">Boards 308–324</strong>
+                        <span class="announce-sub">14:00 – 16:30</span>
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-primary announce-cta" id="announce-cta">Got it</button>
+        </div>
+    </div>
 
     <script type="module" src="./src/main.js"></script>
 </body>
