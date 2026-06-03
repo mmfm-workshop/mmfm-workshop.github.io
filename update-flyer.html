@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=1080">
-<title>MMFM Workshop — CVPR 2026 Update</title>
+<title>MMFM Workshop · CVPR 2026 Update</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
@@ -35,7 +35,7 @@
   /* ─── HERO ─── */
   .hero {
     position: relative;
-    padding: 44px 56px 40px;
+    padding: 34px 50px 30px;
     overflow: hidden;
   }
 
@@ -51,84 +51,88 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom, rgba(26,24,22,0.82) 0%, rgba(26,24,22,0.62) 100%);
+    background: linear-gradient(to bottom, rgba(26,24,22,0.82) 0%, rgba(26,24,22,0.6) 100%);
     z-index: 1;
   }
 
   .hero-content { position: relative; z-index: 2; }
 
+  .hero-top {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
   .badge {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    padding: 8px 18px;
+    padding: 7px 16px;
     background: rgba(255, 255, 255, 0.12);
     backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.18);
     color: white;
     border-radius: 7px;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    margin-bottom: 18px;
   }
 
-  .badge img { height: 34px; width: auto; }
+  .badge img { height: 30px; width: auto; }
 
   .edition {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     letter-spacing: 1.5px;
     text-transform: uppercase;
     color: #f0a030;
-    margin-left: 8px;
+    margin-left: 6px;
   }
 
   .update-tag {
     display: inline-block;
     font-family: 'Outfit', sans-serif;
-    font-size: 19px;
+    font-size: 17px;
     font-weight: 700;
-    letter-spacing: 3px;
+    letter-spacing: 2.5px;
     text-transform: uppercase;
     color: #1a1816;
     background: #f0a030;
-    padding: 8px 20px;
+    padding: 7px 18px;
     border-radius: 999px;
-    margin-bottom: 20px;
   }
 
   .hero h1 {
-    font-size: 60px;
+    font-size: 52px;
     font-weight: 800;
     color: #fff;
     line-height: 1.02;
-    letter-spacing: -1.5px;
+    letter-spacing: -1.4px;
     text-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
   }
 
   .hero .subtitle {
-    margin-top: 14px;
-    font-size: 24px;
+    margin-top: 12px;
+    font-size: 22px;
     font-weight: 500;
     color: rgba(255, 255, 255, 0.82);
   }
 
   /* ─── UPDATES ─── */
   .updates {
-    flex: 1;
-    padding: 40px 56px 28px;
+    padding: 30px 50px 24px;
     display: flex;
     flex-direction: column;
-    gap: 22px;
+    gap: 16px;
   }
 
   .upd-item {
     display: flex;
     align-items: center;
-    gap: 26px;
-    padding: 28px 32px;
+    gap: 22px;
+    padding: 22px 28px;
     background: #fffffe;
     border: 1px solid #ece8e3;
     border-radius: 16px;
@@ -142,9 +146,9 @@
 
   .upd-icon {
     flex: 0 0 auto;
-    width: 78px;
-    height: 78px;
-    border-radius: 18px;
+    width: 66px;
+    height: 66px;
+    border-radius: 16px;
     background: #2d2926;
     display: flex;
     align-items: center;
@@ -157,35 +161,109 @@
   .upd-item.accent .upd-icon svg { stroke: #fff; }
 
   .upd-label {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1.5px;
     color: #8a837c;
-    margin-bottom: 4px;
+    margin-bottom: 3px;
   }
 
   .upd-value {
     font-family: 'Outfit', sans-serif;
-    font-size: 40px;
+    font-size: 36px;
     font-weight: 800;
     color: #1a1816;
-    line-height: 1.08;
+    line-height: 1.06;
     letter-spacing: -0.8px;
   }
 
   .upd-value .sub {
     font-family: 'DM Sans', sans-serif;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 600;
     color: #b45309;
-    margin-left: 12px;
+    margin-left: 10px;
     letter-spacing: 0;
+  }
+
+  /* ─── SPEAKERS STRIP ─── */
+  .speakers {
+    flex: 1;
+    padding: 6px 50px 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .sec-label {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 18px;
+  }
+
+  .sec-label h2 {
+    font-size: 24px;
+    letter-spacing: -0.3px;
+    color: #1a1816;
+  }
+
+  .sec-label .rule {
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(to right, #e0a86b, #e8e4df);
+    border-radius: 2px;
+  }
+
+  .speakers-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 14px;
+  }
+
+  .speaker { display: flex; flex-direction: column; align-items: center; text-align: center; }
+
+  .speaker .time {
+    font-family: 'Outfit', sans-serif;
+    font-size: 19px;
+    font-weight: 800;
+    color: #b45309;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+  }
+
+  .speaker-avatar {
+    width: 104px;
+    height: 104px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #faf9f7;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+  }
+
+  .speaker-avatar img { width: 100%; height: 100%; object-fit: cover; }
+
+  .speaker-name {
+    font-family: 'Outfit', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: #1a1816;
+    line-height: 1.1;
+    margin-top: 9px;
+  }
+
+  .speaker-affiliation {
+    font-size: 14px;
+    font-weight: 600;
+    color: #8a837c;
+    margin-top: 2px;
   }
 
   /* ─── FOOTER ─── */
   .footer {
-    padding: 24px 56px;
+    padding: 20px 50px;
     background: #1a1816;
     display: flex;
     justify-content: space-between;
@@ -194,21 +272,21 @@
 
   .footer-logo {
     font-family: 'Outfit', sans-serif;
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 700;
     color: #fff;
   }
 
   .footer-logo span {
     font-family: 'DM Sans', sans-serif;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 500;
     color: rgba(255, 255, 255, 0.5);
     margin-left: 12px;
   }
 
   .footer-url {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 700;
     color: #f0a030;
   }
@@ -222,14 +300,16 @@
   <div class="hero">
     <div class="hero-bg"></div>
     <div class="hero-content">
-      <div class="badge">
-        <img src="public/assets/conference/cvpr-navbar-logo.svg" alt="CVPR">
-        Workshop
-        <span class="edition">5th Edition</span>
+      <div class="hero-top">
+        <div class="badge">
+          <img src="public/assets/conference/cvpr-navbar-logo.svg" alt="CVPR">
+          Workshop
+          <span class="edition">5th Edition</span>
+        </div>
+        <div class="update-tag">Important Update</div>
       </div>
-      <div class="update-tag">Important Update</div>
       <h1>What is Next in<br>Multimodal Foundation Models?</h1>
-      <div class="subtitle">New room &amp; poster session details — see you in Denver!</div>
+      <div class="subtitle">New room &amp; poster session details. See you in Denver!</div>
     </div>
   </div>
 
@@ -237,31 +317,71 @@
   <div class="updates">
     <div class="upd-item">
       <div class="upd-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
       </div>
       <div>
         <div class="upd-label">Date</div>
-        <div class="upd-value">June 3, 2026 <span class="sub">Afternoon</span></div>
+        <div class="upd-value">June 3, 2026 <span class="sub">Afternoon · from 1:00 PM</span></div>
       </div>
     </div>
 
     <div class="upd-item accent">
       <div class="upd-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
       </div>
       <div>
         <div class="upd-label">New Workshop Room</div>
-        <div class="upd-value">Four Seasons 4</div>
+        <div class="upd-value">Four Seasons 4 <span class="sub">Colorado Convention Center</span></div>
       </div>
     </div>
 
     <div class="upd-item">
       <div class="upd-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
       </div>
       <div>
         <div class="upd-label">Poster Session</div>
         <div class="upd-value">Boards 308–324 <span class="sub">14:00 – 16:30</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SPEAKERS -->
+  <div class="speakers">
+    <div class="sec-label">
+      <h2>Keynote Speakers</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="speakers-grid">
+      <div class="speaker">
+        <div class="time">1:05 PM</div>
+        <div class="speaker-avatar"><img src="public/assets/speakers/serena.jpg" alt="Serena Yeung-Levy"></div>
+        <div class="speaker-name">Serena<br>Yeung-Levy</div>
+        <div class="speaker-affiliation">Stanford</div>
+      </div>
+      <div class="speaker">
+        <div class="time">1:35 PM</div>
+        <div class="speaker-avatar"><img src="public/assets/speakers/vincent.jpg" alt="Vincent Sitzmann"></div>
+        <div class="speaker-name">Vincent<br>Sitzmann</div>
+        <div class="speaker-affiliation">MIT EECS</div>
+      </div>
+      <div class="speaker">
+        <div class="time">2:05 PM</div>
+        <div class="speaker-avatar"><img src="public/assets/speakers/trevor_v2.png" alt="Trevor Darrell"></div>
+        <div class="speaker-name">Trevor<br>Darrell</div>
+        <div class="speaker-affiliation">UC Berkeley</div>
+      </div>
+      <div class="speaker">
+        <div class="time">4:00 PM</div>
+        <div class="speaker-avatar"><img src="public/assets/speakers/hadar.jpg" alt="Hadar Averbuch-Elor"></div>
+        <div class="speaker-name">Hadar<br>Averbuch-Elor</div>
+        <div class="speaker-affiliation">Cornell</div>
+      </div>
+      <div class="speaker">
+        <div class="time">4:30 PM</div>
+        <div class="speaker-avatar"><img src="public/assets/speakers/shuai-bai.jpg" alt="Shuai Bai"></div>
+        <div class="speaker-name">Shuai<br>Bai</div>
+        <div class="speaker-affiliation">Alibaba</div>
       </div>
     </div>
   </div>

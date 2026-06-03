@@ -171,7 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
   renderSchedule();
   renderOrganizers();
 
-  // Deadline time tooltips — show local timezone on hover
+  // Deadline time tooltips: show local timezone on hover
   const tooltip = document.createElement('span');
   tooltip.className = 'deadline-tooltip';
   document.body.appendChild(tooltip);
@@ -219,7 +219,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Announcement Popup — shown on every page load
+  // Announcement Popup: shown on every page load
   const announceOverlay = document.getElementById('announce-overlay');
   if (announceOverlay) {
     const closeBtn = document.getElementById('announce-close');
